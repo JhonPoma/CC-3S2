@@ -1,0 +1,96 @@
+Ejercicio 1
+
+ ¿Qué expresión tiene el error?
+ El error esté en : "for (int i = 1; i < 31; i++)" porque deberìa ser "i < 32" para que tome en cuenta el ùtimo valor.
+
+ ¿Cuál podría ser el número de casos de prueba requeridos para probar esta función exhaustivamente?
+ Para probar exhaustivamente la función andAll() tendría que realizarse 2 a la 32 pruebas, una para cada combinación de true y false en el arreglo.
+
+Ejercicio 2
+ ¿Qué ideas demuestra esta historia?
+  a) Incluso el software crítico para la seguridad de alta calidad puede tener errores residuales.
+  b) Probar todas las entradas posibles es la mejor solución a este problema.
+  c) El software exhibe un comportamiento discontinuo, a diferencia de muchos sistemas diseñados físicamente.
+  d) La verificación de tipos estáticos podría haber detectado este error.
+
+  Respuesta a)
+
+ Ejercicio 3
+  Un conjunto de pruebas es correcto si:
+  a) Todos sus casos de prueba fallan cuando se ejecutan en una implementación con errores
+  b) Algún caso de prueba falla cuando se ejecuta en una implementación con errores
+  c) Todos sus casos de prueba pasan cuando se ejecutan en una implementación legal
+  d) Algunos casos de prueba pasan cuando se ejecutan en una implementación legal
+
+  Respuesta b) y c)
+
+ Ejercicio 4
+ Un conjunto de pruebas vacío no contiene casos de prueba. Suponiendo una especificación no trivial, un conjunto de pruebas vacío es:
+ a) Correcto
+ b) Exhaustivo
+ c) Pequeña
+
+ Respuesta a)
+
+ Ejercicio 5
+ // particion: x < 0; x >= 0
+ a) Los subdominios son disjuntos
+ b) Los subdominios están completos
+ c) Los subdominios son correctos
+ Respuesta a), b).
+
+ // particion: x es un cuadrado perfecto; x es > 0 pero no es un cuadrado perfecto
+ a) Los subdominios son disjuntos
+ b) Los subdominios están completos
+ c) Los subdominios son correctos
+ Respuesta a), b), c)
+
+ // particion: x=0, x=1, x=7, x=16
+ a) Los subdominios son disjuntos
+ b) Los subdominios están completos
+ c) Los subdominios son correctos
+ Respuesta a) y c)
+
+
+ Ejercicio 6
+ // particion: x e y no son  0
+ a) Los subdominios son disjuntos
+ b) Los subdominios están completos
+ c) Los subdominios son correctos
+ Respuesta a) y c)
+
+ // particion: x es divisible por y; y es divisible por x; x e y son primeros relativos
+ a) Los subdominios son disjuntos
+ b) Los subdominios están completos
+ c) Los subdominios son correctos
+ Respuesta: c)
+
+ Ejercicio 7
+ ¿Cuáles son los valores límite apropiados para probar esta función?
+ winsAndLosses = WWWWW
+ winsAndLosses = LLLLL
+
+ Ejercicio 8
+ a) particion en a: 0, 1
+ b) particion en a: 0
+ c) particion en a: 1
+ d) particion en a: 0, positivo, negativo
+ e) particion en a: positivo, negativo
+ f) particion en a: 1, !=1
+ g) particion en a: (donde "pequeño" encaja en long y "grande" no)
+ Respuesta: a), e), g)
+
+ Ejercicio 9
+ Si solo queremos cubrir cada subdominio de las tres particiones, ¿cuántos valores diferentes de a necesitaríamos?.
+ // particion en a: 0, positivo, negativo
+ // particion en a: 1, !=1
+ // particion on a: donde "pequeño" encaja en long y "grande" no)
+ Respuesta: 3,2,2 valores. (7 valores).
+
+ Ejercicio 10
+ Con este enfoque, ¿cuántos casos de prueba se necesitan para cubrir las siguientes tres particiones?
+
+ // particion en a: 0, positivo, negativo
+ // particion en b: 0, positive, negativo
+ // particion en a.multiply(b): 0, positivo, negativo
+ Respuesta: 9 casos de prueba.

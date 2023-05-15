@@ -13,6 +13,7 @@ public class CalculatorTest {
         calculadora = new CalculadoraSimple();
     }
 
+
     //1 prueba assertTrue
     @Test
     public void whenCalculatorInitializedTheReturnTrue(){
@@ -20,23 +21,57 @@ public class CalculatorTest {
         assertTrue(calculadora.getStatus());
     }
 
-    // 2prueba, assertEquals
+    //-----------------------------------------------------------
+    /**
+     * Adicion : primero hacemos una prueba RED, luego una GREEN, aqui si
+     * refactorizamos cuando llamamanos a CalculadoraSimple
+     */
+    @Test
+    public void whenAdditionTwoNumberThenIncorrectAnswer(){
+        //CalculadoraSimple calculadora = new CalculadoraSimple();
+        assertEquals(5,calculadora.addition(4,3));
+    }
+
     @Test
     public void whenAdditionTwoNumberThenCorrectAnswer(){
         //CalculadoraSimple calculadora = new CalculadoraSimple();
         assertEquals(5,calculadora.addition(2,3));
     }
 
+
+    //------------------------------------------------------
+    /**
+     * Resto: primero hacemos una prueba RED luego una GREEN.
+     */
+    @Test
+    public void cuandoRestoDosNumerosEntoncesRespuestaIncorrecta(){
+        assertEquals(6,calculadora.resta(10,2));
+    }
     @Test
     public void cuandoRestoDosNumerosEntoncesRespuestaCorrecta(){
         assertEquals(6,calculadora.resta(8,2));
     }
 
-    //3Prueba
+
+    //---------------------------------------------------------------------------------
+    /**
+     * Division-caso1: primero hacemos una prueba RED luego una GREEN.
+     */
+    @Test
+    public void whenDivisionThenReturnIncorrectAnswer(){
+        assertEquals(2,calculadora.division(8,3));
+    }
     @Test
     public void whenDivisionThenReturnCorrectAnswer(){
         assertEquals(2,calculadora.division(8,4));
     }
+
+
+
+    //---------------------------------------------------------------------------------
+    /**
+     * Division-caso2: primero hacemos una prueba RED luego una GREEN.
+     */
     @Test
     public void whenDivisionByZeroThenTrownException(){
         Throwable exception = assertThrows(IllegalArgumentException.class, ()->{
@@ -44,6 +79,10 @@ public class CalculatorTest {
         });
         assertEquals("Nose puede divider por cerO",exception.getMessage());
     }
+
+
+
+
 
     @Test
     public void cuandoMultiplicasDosNumerosEntoncesRespuestaCorrecta(){

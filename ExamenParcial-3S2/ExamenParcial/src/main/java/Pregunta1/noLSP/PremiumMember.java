@@ -1,8 +1,8 @@
-package Pregunta1;
+package Pregunta1.noLSP;
 
 public class PremiumMember extends Member {
     public PremiumMember(String nombre){
-        super(nombre, nombre1);
+        super(nombre);
     }
 
     /**
@@ -10,7 +10,7 @@ public class PremiumMember extends Member {
      */
     @Override
     public void joinTournament() {
-
+        System.out.println("");
     }
 
     @Override

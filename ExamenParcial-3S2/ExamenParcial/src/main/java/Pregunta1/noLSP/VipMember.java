@@ -1,8 +1,8 @@
-package Pregunta1;
+package Pregunta1.noLSP;
 
 public class VipMember extends Member {
     public VipMember(String nombre){
-        super(nombre, nombre1);
+        super(nombre);
     }
 
     /**

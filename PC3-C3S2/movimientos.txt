@@ -1,0 +1,1 @@
+Jugador: ROJO, Fila: 2, Columna: 1

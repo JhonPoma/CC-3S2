@@ -23,7 +23,6 @@ public class AutoJuegoGeneral extends JuegoGeneral implements AutoJuego {
       return null;
     }
   }
-
   /**
    * Realiza un movimiento en un AutoJuegoGeneral
    *
@@ -48,7 +47,8 @@ public class AutoJuegoGeneral extends JuegoGeneral implements AutoJuego {
           realizarAutoMovimiento(getCeldaJugadorRojo());
         }
       }
-    } else if (getTurno() == Turno.AZUL && jugadorAzul == TipoJugador.COMPUTADORA) {
+    }
+    else if (getTurno() == Turno.AZUL && jugadorAzul == TipoJugador.COMPUTADORA) {
       realizarAutoMovimiento(celda);
       while (hizoSos(fila, columna)) { // Si la computadora hace SOS, continúa jugando
         realizarAutoMovimiento(celda);
@@ -58,7 +58,8 @@ public class AutoJuegoGeneral extends JuegoGeneral implements AutoJuego {
       while (hizoSos(fila, columna)) { // Si la computadora hace SOS, continúa jugando
         realizarAutoMovimiento(celda);
       }
-    } else if (getTurno() == Turno.ROJO && jugadorAzul == TipoJugador.COMPUTADORA) {
+    }
+    else if (getTurno() == Turno.ROJO && jugadorAzul == TipoJugador.COMPUTADORA) {
       super.realizarMovimiento(fila, columna, getCeldaJugadorRojo());
       if (!hizoSos(fila, columna)) {
         while (realizarAutoMovimiento(
@@ -73,12 +74,6 @@ public class AutoJuegoGeneral extends JuegoGeneral implements AutoJuego {
         }
       }
     }
-
-    System.out.println("\nfila["+ fila + "]...columna["+ columna+"]...");
-    //GameRecorder grabar = new GameRecorder();
-    grabando = new GameRecorder();
-    grabando.grabarMovimiento(jugador,fila,columna,celda);
-
   }
 
   /**

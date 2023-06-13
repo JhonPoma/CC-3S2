@@ -6,16 +6,13 @@ public class AutoJuegoSimple extends JuegoSimple implements AutoJuego {
 
   private TipoJugador jugadorAzul; // Tipo de jugador(Computadora o Humano)
   private TipoJugador jugadorRojo; // Tipo de jugador(Computadora o Humano)
-  //Jhonatan
-  private GameRecorder grabando;
-  //Jhonatan
+  private GameRecorder grabando = new GameRecorder();
 
   public AutoJuegoSimple(int tamanio, TipoJugador jugadorAzul, TipoJugador jugadorRojo) {
     super(tamanio);
     this.jugadorAzul = jugadorAzul;
     this.jugadorRojo = jugadorRojo;
   }
-
   @Override
   public TipoJugador getTipoJugador(String jugador) {
     if (jugador.equals("Azul")) {
@@ -43,21 +40,6 @@ public class AutoJuegoSimple extends JuegoSimple implements AutoJuego {
     if (getEstadoJuego() != EstadoJuego.JUGANDO) {
       return;
     }
-    if (getTurno() == Turno.AZUL && jugadorAzul == TipoJugador.COMPUTADORA) {
-      realizarAutoMovimiento(celda);
-    } else if (getTurno() == Turno.ROJO && jugadorRojo == TipoJugador.COMPUTADORA) {
-      realizarAutoMovimiento(celda);
-    } else if (getTurno() == Turno.ROJO && jugadorRojo == TipoJugador.HUMANO) {
-      super.realizarMovimiento(fila, columna, celda);
-      if ((getEstadoJuego() == EstadoJuego.JUGANDO)) {
-        realizarAutoMovimiento(getCeldaJugadorAzul());
-      }
-    } else if (getTurno() == Turno.AZUL && jugadorAzul == TipoJugador.HUMANO) {
-      super.realizarMovimiento(fila, columna, celda);
-      if ((getEstadoJuego() == EstadoJuego.JUGANDO)) {
-        realizarAutoMovimiento(getCeldaJugadorAzul());
-      }
-    }
     // Si ambos jugadores son la computadora continúa realizando jugadas hasta que ya no haya celdas vacías
     if (jugadorAzul == TipoJugador.COMPUTADORA && jugadorRojo == TipoJugador.COMPUTADORA) {
       while (getEstadoJuego() == EstadoJuego.JUGANDO) {
@@ -69,15 +51,26 @@ public class AutoJuegoSimple extends JuegoSimple implements AutoJuego {
       }
     }
 
-    System.out.println("\nfila["+ fila + "]...columna["+ columna+"]...");
-    //GameRecorder grabar = new GameRecorder();
-    grabando = new GameRecorder();
-    grabando.grabarMovimiento(jugador,fila,columna,celda);
+      else if (getTurno() == Turno.AZUL && jugadorAzul == TipoJugador.COMPUTADORA) {
+      realizarAutoMovimiento(celda);
+    } else if (getTurno() == Turno.ROJO && jugadorRojo == TipoJugador.COMPUTADORA){
+      realizarAutoMovimiento(celda);
+  }
 
+    else if (getTurno() == Turno.ROJO && jugadorRojo == TipoJugador.HUMANO) {
+      super.realizarMovimiento(fila, columna, celda);
 
+      if ((getEstadoJuego() == EstadoJuego.JUGANDO)) {
+        realizarAutoMovimiento(getCeldaJugadorAzul());
+      }
+    } else if (getTurno() == Turno.AZUL && jugadorAzul == TipoJugador.HUMANO) {
+      super.realizarMovimiento(fila, columna, celda);
 
+      if ((getEstadoJuego() == EstadoJuego.JUGANDO)) {
+        realizarAutoMovimiento(getCeldaJugadorRojo());
+      }
 
-
+    }
   }
 
 

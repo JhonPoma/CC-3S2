@@ -21,7 +21,7 @@ public class JuegoSimple {
   private Celda[][] tablero;
   private Turno turno;
   private Turno ganador;
-  private EstadoJuego estadoJuegoActual;
+  public EstadoJuego estadoJuegoActual;
 
   private Celda celdaJugadorAzul;
   private Celda celdaJugadorRojo;
@@ -34,10 +34,6 @@ public class JuegoSimple {
     iniciarJuego(tamanio);
     celdaJugadorAzul = Celda.S;
     celdaJugadorRojo = Celda.S;
-
-    //Jhonatan
-
-    //Jhonatan
   }
 
   public Celda getCeldaJugadorAzul() {
@@ -155,9 +151,8 @@ public class JuegoSimple {
       }
     }
 
-    //GameRecorder grabar = new GameRecorder();
     game = new GameRecorder();
-    game.grabarMovimiento(jugador,fila,columna,valorCelda);
+    game.grabarMovimiento(jugador,fila,columna,valorCelda,getEstadoJuego());
 
   }
 
@@ -174,8 +169,8 @@ public class JuegoSimple {
     } else if (esEmpate()) {
       estadoJuegoActual = EstadoJuego.EMPATE;
     }
-
   }
+
 
   /**
    * Este método se llama después de verificar que no hubo SOS Verifica que no hay más celdas vacías

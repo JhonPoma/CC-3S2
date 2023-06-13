@@ -1,0 +1,51 @@
+Turno: AZUL	Movimiento:[2][0]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[0][2]	ValorCelda: [S]
+Turno: AZUL	Movimiento:[1][1]	ValorCelda: [O]
+EstadoJuego: GANO_AZUL
+
+Turno: AZUL	Movimiento:[2][0]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[0][2]	ValorCelda: [S]
+Turno: AZUL	Movimiento:[1][1]	ValorCelda: [O]
+Turno: AZUL	Movimiento:[0][0]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[1][0]	ValorCelda: [O]
+Turno: ROJO	Movimiento:[0][1]	ValorCelda: [O]
+Turno: ROJO	Movimiento:[2][2]	ValorCelda: [O]
+Turno: AZUL	Movimiento:[2][1]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[1][2]	ValorCelda: [O]
+EstadoJuego: GANO_ROJO
+
+Turno: AZUL	Movimiento:[0][0]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[7][7]	ValorCelda: [S]
+Turno: AZUL	Movimiento:[2][2]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[1][1]	ValorCelda: [O]
+EstadoJuego: GANO_ROJO
+
+Turno: AZUL	Movimiento:[2][0]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[1][2]	ValorCelda: [S]
+Turno: AZUL	Movimiento:[0][0]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[1][0]	ValorCelda: [O]
+Turno: ROJO	Movimiento:[2][1]	ValorCelda: [S]
+Turno: AZUL	Movimiento:[1][1]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[0][2]	ValorCelda: [S]
+Turno: AZUL	Movimiento:[0][1]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[2][2]	ValorCelda: [S]
+EstadoJuego: GANO_ROJO
+
+Turno: AZUL	Movimiento:[0][0]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[1][0]	ValorCelda: [S]
+Turno: AZUL	Movimiento:[2][1]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[2][2]	ValorCelda: [S]
+Turno: AZUL	Movimiento:[1][1]	ValorCelda: [O]
+EstadoJuego: GANO_AZUL
+
+Turno: AZUL	Movimiento:[2][2]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[1][1]	ValorCelda: [S]
+Turno: AZUL	Movimiento:[0][0]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[2][1]	ValorCelda: [S]
+Turno: AZUL	Movimiento:[0][1]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[2][0]	ValorCelda: [S]
+Turno: AZUL	Movimiento:[1][0]	ValorCelda: [O]
+Turno: AZUL	Movimiento:[0][2]	ValorCelda: [S]
+Turno: ROJO	Movimiento:[1][2]	ValorCelda: [O]
+EstadoJuego: EMPATE
+

@@ -630,14 +630,6 @@ public class SosGui extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
           juego.setEstadoJuego(EstadoJuego.JUGANDO);
-
-//          //jhonatan
-//          if(btnGrabar.isSelected()){
-//            gameRecorder.cambiarGrabarJuego();
-//
-//          }
-//          //jhonatan
-
           if (btnComputadoraAzul.isSelected()) {
             Celda celda;
             if (btnSAzul.isSelected()) {
@@ -653,7 +645,6 @@ public class SosGui extends JFrame {
       });
 
       panelLetras.add(boxLetraRojo);
-
       add(btnHumanoRojo);
       add(panelLetras);
       add(btnComputadoraRojo);
@@ -666,24 +657,17 @@ public class SosGui extends JFrame {
       btnGrabar.setBackground(Color.WHITE);
       btnGrabar.setBorder(BorderFactory.createEmptyBorder());
 
-
       btnGrabar.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
           if (btnGrabar.isSelected()) {
             gameRecorder.cambiarGrabarJuego();
-            //gameRecorder.iniciarGrabacion();
-            //System.out.println(gameRecorder.grabarJuego);
           } else{
             gameRecorder.cambiarGrabarJuego();
-            //System.out.println(gameRecorder.grabarJuego);
-            //panelCentral.repaint();
           }
         }
       });
-
       add(btnGrabar);
-
     }
   }
 

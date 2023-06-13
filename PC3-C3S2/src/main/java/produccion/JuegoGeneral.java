@@ -21,9 +21,7 @@ public class JuegoGeneral extends JuegoSimple {
    */
   @Override
   public void realizarMovimiento(int fila, int columna, Celda valorCelda) {
-    //Jhonatan
     String jugador = String.valueOf(getTurno());//convierto a string para ver de quien es su turno
-    //Jhonatan
 
     if (fila >= 0 && fila < getTotalFilas() && columna >= 0 && columna < getTotalColumnas()
         && getCelda(fila, columna) == Celda.VACIA) {
@@ -33,14 +31,8 @@ public class JuegoGeneral extends JuegoSimple {
       }
       actualizarEstadoJuego(fila, columna);
     }
-
-
-    System.out.println("\nfila["+ fila + "]...columna["+ columna+"]...");
     game = new GameRecorder();
-    game.grabarMovimiento(jugador,fila,columna,valorCelda);
-
-
-
+    game.grabarMovimiento(jugador,fila,columna,valorCelda,getEstadoJuego());
   }
 
   /**
@@ -116,7 +108,7 @@ public class JuegoGeneral extends JuegoSimple {
       }
       if (fila < getFilasTotales() - 2 && col < getColumnasTotales() - 2 && getCelda(fila + 1,
           col + 1) == Celda.O && getCelda(fila + 2, col + 2) == Celda.S) {
-        aniadirLineaSos(col, fila, col - 2, fila + 2);
+        aniadirLineaSos(col, fila, col + 2, fila + 2);
         actualizarPuntos();
         realizoSos = true;
       }
@@ -168,6 +160,7 @@ public class JuegoGeneral extends JuegoSimple {
     } else {
       numeroSosRojo++;
     }
+
   }
 
 }

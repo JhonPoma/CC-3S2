@@ -1,9 +1,6 @@
-/*
-Clase que maneja el cálculo de un impuesto específico.
-De los requisitos de esta clase, el cálculo solo
-tiene sentido para números positivos
-* */
-public class TaxCalculator {
+//En lugar de lanzar una excepción, podríamos escribir assert
+//La máquina virtual de Java (JVM) generará un AssertionError.
+public class TaxCalculator1 {
     //PRECONDICION: que no acepta numeros negativos.
     //POSTCONDICION: que este metodo no devuelva numeros negativos.
 
@@ -16,7 +13,8 @@ public class TaxCalculator {
      */
     public double calculateTax(double valor){
         if(valor < 0){
-            throw new RuntimeException("El valor ingresado es negativo");
+            //throw new RuntimeException("El valor ingresado es negativo");
+            assert valor>=0 : "valor no puede ser negativo";
         }
 
         double taxValor = 0;
@@ -25,20 +23,10 @@ public class TaxCalculator {
         una excepción, alertando al consumidor que la postcondición no se cumple:
         */
         if(taxValor < 0){
-            throw new RuntimeException("...");
+            //throw new RuntimeException("...");
+            assert taxValor >= 0 : "El resultado no puede ser negativo";
         }
         return taxValor;
     }
-
 }
-//En lugar de lanzar una excepción, podríamos escribir assert.
-//Ese ejemplo lo veremos en la clase TaxCalculator1.java
-
-//OBS:
-/*          Precondiciones Debiles
-Las precondiciones más débiles facilitan que otras clases
-invoquen el método. Después de todo, sin importar el
-valor que le pases a calculateTax, el programa devolverá algo.
-Esto contrasta con la versión anterior, donde un número
-negativo arroja un error.
- */
+//Tambien puedo dejar de usar los "if", solo me quedo con los asserts.

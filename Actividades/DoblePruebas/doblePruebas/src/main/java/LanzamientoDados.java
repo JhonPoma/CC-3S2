@@ -10,6 +10,6 @@ public class LanzamientoDados {
 
     public String asText(){
         int lanzado = rnd.nextInt(NUMERO_DE_LADOS) + 1;
-        return String.format("Tu lanzamiento es %d",lanzado);
+        return String.format("Sacastes un %d",lanzado);
     }
 }

@@ -1,7 +1,7 @@
 ### Desarrollo de software
 
 1. Amplía la definición IEEE de arquitectura de software para incluir una definición de las actividades involucradas en el diseño arquitectónico. 
-2. ¿Cuáles son las diferencias entre una arquitectura de seguridad centralizada y distribuida?.Una arquitectura de seguridad centralizada tiene un control y gestión centralizados y una mayor simplicidad, pero puede tener limitaciones de escalabilidad. Es más vulnerable.
+2. ¿Cuáles son las diferencias entre una arquitectura de seguridad centralizada y distribuida?.\nUna arquitectura de seguridad centralizada tiene un control y gestión centralizados y una mayor simplicidad, pero puede tener limitaciones de escalabilidad. Es más vulnerable.
 Por otro lado, una arquitectura de seguridad distribuida nos ofrece adaptabilidad y escalabilidad, pero puede ser más compleja de gestionar, mayor seguridad porque está distribuido en varios servidores.
 
 3. Enumera  los problemas arquitectónicos más importantes para el desarrollo de productos.

@@ -2,9 +2,9 @@ public class Triangulo {
 
     /**
      *
-     * @param a, angulo a > 0
-     * @param b, angulo b > 0
-     * @param c, angulo c > 0 ; a+b+c=180.
+     * @param a angulo a > 0
+     * @param b angulo b > 0
+     * @param c angulo c > 0 ; a+b+c=180.
      * @return  RIGHT,   if a = 90 or b = 90 or c = 90;
      *          OBTUSE,  if a > 90 or b >=90 or c > 90
      *          else ACUTE

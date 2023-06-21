@@ -1,6 +1,4 @@
-public interface WordRepository {
-    void WordRepositoryException(){
-
-    }
+public interface WordRepository  {
+  String fetchWordByNumber(int wordNumber) throws WordRepositoryException;
 
 }

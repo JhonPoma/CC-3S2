@@ -10,7 +10,7 @@ public class Triangulo {
      *          else ACUTE
      */
     public TriangleType reportTriangle(double a, double b, double c){
-        if(a<0 || b<0 || c<0){
+        if(a<0 || b<0 || c<0 || (a+b+c)!=180 ){
             return TriangleType.ERROR;
         }
         if(a==90 || b==90 || c==90){
@@ -24,16 +24,15 @@ public class Triangulo {
         }
     }
 
-    public static void main(String[] args){
-        double a = 90;
-        double b = -45;
-        double c = 135;
-
-        Triangulo trian = new Triangulo();
-        TriangleType result = trian.reportTriangle(a,b,c);
-        System.out.println(result);
-
-    }
+//    public static void main(String[] args){
+//        double a = 90;
+//        double b = -45;
+//        double c = 135;
+//
+//        Triangulo trian = new Triangulo();
+//        TriangleType result = trian.reportTriangle(a,b,c);
+//        System.out.println(result);
+//    }
 
 }
 

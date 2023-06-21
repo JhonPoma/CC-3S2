@@ -1,13 +1,10 @@
+### Desarrollo de software
+
 1. Amplía la definición IEEE de arquitectura de software para incluir una definición de las actividades involucradas en el diseño arquitectónico. 
-2. ¿Cuáles son las diferencias entre una arquitectura de seguridad centralizada y distribuida?.
-Una arquitectura de seguridad centralizada tiene un control y gestión centralizados y una mayor simplicidad, pero puede tener limitaciones de escalabilidad. Es más vulnerable.
+2. ¿Cuáles son las diferencias entre una arquitectura de seguridad centralizada y distribuida?.Una arquitectura de seguridad centralizada tiene un control y gestión centralizados y una mayor simplicidad, pero puede tener limitaciones de escalabilidad. Es más vulnerable.
 Por otro lado, una arquitectura de seguridad distribuida nos ofrece adaptabilidad y escalabilidad, pero puede ser más compleja de gestionar, mayor seguridad porque está distribuido en varios servidores.
 
 3. Enumera  los problemas arquitectónicos más importantes para el desarrollo de productos.
-Estructura de datos
-Cambios en los componentes
-Plataforma de ejecución del sistema.
-
 4. ¿Qué elección de arquitectura es probable que aumente la mantenibilidad del sistema?.
 5. Una arquitectura diseñada para respaldar la seguridad puede basarse en un modelo centralizado, donde toda la información confidencial se almacena en un lugar seguro, o en un modelo distribuido, 
 donde la información se distribuye y almacena en muchos lugares diferentes. Sugiere una ventaja y una desventaja de cada enfoque.
@@ -32,3 +29,4 @@ donde la información se distribuye y almacena en muchos lugares diferentes. Sug
 23. Usando un diagrama, muestra cómo se puede implementar la arquitectura genérica para una aplicación basada en web usando una arquitectura cliente-servidor de varios niveles. 
 24. ¿Bajo qué circunstancias impulsarías tanto procesamiento local como sea posible en el cliente en una arquitectura cliente-servidor? 
 25. Realiza una lectura preliminar y describe tres diferencias fundamentales entre las bases de datos relacionales y NoSQL. 
+Sugiere tres tipos de productos de software que podrían beneficiarse del uso de bases de datos NoSQL y explique por qué el enfoque NoSQL es apropiado.

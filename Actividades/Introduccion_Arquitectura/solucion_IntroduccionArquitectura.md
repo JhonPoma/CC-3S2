@@ -14,16 +14,41 @@ Por otro lado, una arquitectura de seguridad distribuida nos ofrece adaptabilida
 **4. ¿Qué elección de arquitectura es probable que aumente la mantenibilidad del sistema?.** <br>
 
 **5. Una arquitectura diseñada para respaldar la seguridad puede basarse en un modelo centralizado, donde toda la información confidencial se almacena en un lugar seguro, o en un modelo distribuido, donde la información se distribuye y almacena en muchos lugares diferentes. Sugiere una ventaja y una desventaja de cada enfoque.** <br>
+* Modelo centralizado <br>
+  * Mayor facilidad para implementar medidas de seguridad y control de acceso.
+  * Al concentrar toda la información en un solo lugar, se crea un objetivo atractivo para los atacantes. Si este punto centralizado es comprometido, toda la información confidencial queda expuesta. 
+* Modelo distribuido
+  * Al distribuir la información en múltiples ubicaciones, la pérdida o el acceso no autorizado a un sitio no resulta en la pérdida total de los datos.
+  * Mayor complejidad en la implementación de la seguridad, al estar distribuido. Esto puede requerir una gestión más compleja de los sistemas de seguridad. 
+
 
 **6. Explica qué se entiende por disponibilidad del sistema.** <br>
+Es la capacidad de un sistema para estar operativo y accesible para su uso cuando se requiere, es la medida en la que un sistema o servicio está disponible y funcionando correctamente durante el tiempo esperado.
+Lo que garantiza que los usuarios puedan utilizarlo sin interrupciones significativas.
 
 **7. ¿Por qué es importante tratar de minimizar la complejidad en un sistema de software?.** <br>
+Minimizar la complejidad en un sistema de software es fundamental para facilitar el mantenimiento, mejorar la comprensión, garantizar la calidad del código, reducir los tiempos y costos de desarrollo, y mejorar el rendimiento y la eficiencia del sistema en general.
 
 **8. Estás desarrollando un producto para vender a compañías financieras. Explicando las razones de tu respuesta, considera los problemas que afectan la toma de decisiones arquitectónicas y sugiere qué dos factores probablemente sean los más importantes.** <br> 
 
 **9. ¿Cuáles son las tres preguntas fundamentales que debes considerar durante el proceso de diseño arquitectónico?.** <br> 
+* ¿Cómo debe organizarse el sistema como un conjunto de componentes
+arquitectónicos, donde cada uno de estos componentes proporciona un
+subconjunto de la funcionalidad general del sistema?.
+* ¿Cómo deberían distribuirse y comunicarse entre sí estos componentes
+arquitectónicos?. <br>
+Implica decidir los mecanismos de comunicación y los patrones de interacción entre los componentes. Se pueden considerar en enfoques como la comunicacion sincrona o asincrona.
+
+* ¿Qué tecnologías se debe usar para construir el sistema y qué componentes deben
+reutilizarse?. <br>
+Una selección adecuada de tecnologías y la identificación de componentes que se pueden reutilizar en el sistema. Implica evaluar las herramientas, los frameworks y las bibliotecas disponibles para satisfacer los requisitos del sistema.
+
 
 **10. Enumera 4 tipos de relaciones entre componentes de software.** <br> 
+* Dependencia: La dependencia es una relación en la que un componente requiere o depende de otro para su funcionamiento.
+* Asociación: La asociación es una relación más general entre componentes que indica que existen conexiones o vínculos entre ellos.
+* Herencia: La herencia es una relación en la que un componente (subclase) hereda las características y funcionalidades de otro componente (superclase).
+
 
 **11. ¿Por qué a veces es imposible localizar las interacciones de los componentes dentro de una sola capa?.** <br> 
 

@@ -14,19 +14,25 @@ Por otro lado, una arquitectura de seguridad distribuida nos ofrece adaptabilida
 **4. ¿Qué elección de arquitectura es probable que aumente la mantenibilidad del sistema?.**
 
 **5. Una arquitectura diseñada para respaldar la seguridad puede basarse en un modelo centralizado, donde toda la información confidencial se almacena en un lugar seguro, o en un modelo distribuido, 
-donde la información se distribuye y almacena en muchos lugares diferentes. Sugiere una ventaja y una desventaja de cada enfoque.**
+donde la información se distribuye y almacena en muchos lugares diferentes. Sugiere una ventaja y una desventaja de cada enfoque.** <br>
 
 **6. Explica qué se entiende por disponibilidad del sistema.**
 
-7. ¿Por qué es importante tratar de minimizar la complejidad en un sistema de software?.
-8. Estás desarrollando un producto para vender a compañías financieras. Explicando las razones de tu respuesta, considera los problemas que afectan la toma de decisiones arquitectónicas 
-  y sugiere qué dos factores probablemente sean los más importantes. 
-9. ¿Cuáles son las tres preguntas fundamentales que debes considerar durante el proceso de diseño arquitectónico?. 
-10. Enumera 4 tipos de relaciones entre componentes de software. 
-11. ¿Por qué a veces es imposible localizar las interacciones de los componentes dentro de una sola capa?. 
-12. ¿Cuáles son las preocupaciones arquitectónicas transversales?. 
-13. ¿Qué tipos de integración son posibles cuando se incluyen múltiples servicios en un producto de software?.
-14. ¿Por qué necesitas considerar las tecnologías utilizadas en una arquitectura en capas al descomponer un sistema en componentes?. 
+**7. ¿Por qué es importante tratar de minimizar la complejidad en un sistema de software?.** <br>
+**8. Estás desarrollando un producto para vender a compañías financieras. Explicando las razones de tu respuesta, considera los problemas que afectan la toma de decisiones arquitectónicas y sugiere qué dos factores probablemente sean los más importantes.** <br> 
+
+**9. ¿Cuáles son las tres preguntas fundamentales que debes considerar durante el proceso de diseño arquitectónico?.** <br> 
+
+**10. Enumera 4 tipos de relaciones entre componentes de software.** <br> 
+
+**11. ¿Por qué a veces es imposible localizar las interacciones de los componentes dentro de una sola capa?.** <br> 
+
+**12. ¿Cuáles son las preocupaciones arquitectónicas transversales?.** <br> 
+
+**13. ¿Qué tipos de integración son posibles cuando se incluyen múltiples servicios en un producto de software?.** <br>
+
+**14. ¿Por qué necesitas considerar las tecnologías utilizadas en una arquitectura en capas al descomponer un sistema en componentes?.** <br> 
+
 15. Describe brevemente la noción de arquitectura cliente-servidor.  
 16. ¿Cuál es la función de los componentes fundamentales del patrón MVC?
 17.  ¿Qué es JSON y en qué se diferencia de XML? 

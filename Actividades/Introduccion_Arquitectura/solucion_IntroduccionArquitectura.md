@@ -1,14 +1,23 @@
 ### Desarrollo de software
 
-1. Amplía la definición IEEE de arquitectura de software para incluir una definición de las actividades involucradas en el diseño arquitectónico. 
-2. ¿Cuáles son las diferencias entre una arquitectura de seguridad centralizada y distribuida?.\nUna arquitectura de seguridad centralizada tiene un control y gestión centralizados y una mayor simplicidad, pero puede tener limitaciones de escalabilidad. Es más vulnerable.
-Por otro lado, una arquitectura de seguridad distribuida nos ofrece adaptabilidad y escalabilidad, pero puede ser más compleja de gestionar, mayor seguridad porque está distribuido en varios servidores.
+**1. Amplía la definición IEEE de arquitectura de software para incluir una definición de las actividades involucradas en el diseño arquitectónico.** 
 
-3. Enumera  los problemas arquitectónicos más importantes para el desarrollo de productos.
-4. ¿Qué elección de arquitectura es probable que aumente la mantenibilidad del sistema?.
-5. Una arquitectura diseñada para respaldar la seguridad puede basarse en un modelo centralizado, donde toda la información confidencial se almacena en un lugar seguro, o en un modelo distribuido, 
-donde la información se distribuye y almacena en muchos lugares diferentes. Sugiere una ventaja y una desventaja de cada enfoque.
-6. Explica qué se entiende por disponibilidad del sistema. 
+**2. ¿Cuáles son las diferencias entre una arquitectura de seguridad centralizada y distribuida?.** <br>
+*Una arquitectura de seguridad centralizada tiene un control y gestión centralizados y una mayor simplicidad, pero puede tener limitaciones de escalabilidad. Es más vulnerable.
+Por otro lado, una arquitectura de seguridad distribuida nos ofrece adaptabilidad y escalabilidad, pero puede ser más compleja de gestionar, mayor seguridad porque está distribuido en varios servidores.*
+
+**3. Enumera  los problemas arquitectónicos más importantes para el desarrollo de productos.** <br>
+* Estructura de datos
+* Cambios en los componentes
+* Plataforma del sitema
+
+**4. ¿Qué elección de arquitectura es probable que aumente la mantenibilidad del sistema?.**
+
+**5. Una arquitectura diseñada para respaldar la seguridad puede basarse en un modelo centralizado, donde toda la información confidencial se almacena en un lugar seguro, o en un modelo distribuido, 
+donde la información se distribuye y almacena en muchos lugares diferentes. Sugiere una ventaja y una desventaja de cada enfoque.**
+
+**6. Explica qué se entiende por disponibilidad del sistema.**
+
 7. ¿Por qué es importante tratar de minimizar la complejidad en un sistema de software?.
 8. Estás desarrollando un producto para vender a compañías financieras. Explicando las razones de tu respuesta, considera los problemas que afectan la toma de decisiones arquitectónicas 
   y sugiere qué dos factores probablemente sean los más importantes. 

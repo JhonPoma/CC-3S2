@@ -11,14 +11,14 @@ Por otro lado, una arquitectura de seguridad distribuida nos ofrece adaptabilida
 * Cambios en los componentes
 * Plataforma del sitema
 
-**4. ¿Qué elección de arquitectura es probable que aumente la mantenibilidad del sistema?.**
+**4. ¿Qué elección de arquitectura es probable que aumente la mantenibilidad del sistema?.** <br>
 
-**5. Una arquitectura diseñada para respaldar la seguridad puede basarse en un modelo centralizado, donde toda la información confidencial se almacena en un lugar seguro, o en un modelo distribuido, 
-donde la información se distribuye y almacena en muchos lugares diferentes. Sugiere una ventaja y una desventaja de cada enfoque.** <br>
+**5. Una arquitectura diseñada para respaldar la seguridad puede basarse en un modelo centralizado, donde toda la información confidencial se almacena en un lugar seguro, o en un modelo distribuido, donde la información se distribuye y almacena en muchos lugares diferentes. Sugiere una ventaja y una desventaja de cada enfoque.** <br>
 
-**6. Explica qué se entiende por disponibilidad del sistema.**
+**6. Explica qué se entiende por disponibilidad del sistema.** <br>
 
 **7. ¿Por qué es importante tratar de minimizar la complejidad en un sistema de software?.** <br>
+
 **8. Estás desarrollando un producto para vender a compañías financieras. Explicando las razones de tu respuesta, considera los problemas que afectan la toma de decisiones arquitectónicas y sugiere qué dos factores probablemente sean los más importantes.** <br> 
 
 **9. ¿Cuáles son las tres preguntas fundamentales que debes considerar durante el proceso de diseño arquitectónico?.** <br> 

@@ -1,6 +1,6 @@
 <h1>Pregunta1</h1>
 
-<h2>FASE ANTES:<\h2>
+FASE ANTES:<br>
   se creo las clases, airport, flight, passenger<br>
 FASE 1:<br>
 Sigue la lógica comercial para un vuelo comercial y traduce eso escribiendo una prueba llamada 

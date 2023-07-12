@@ -11,7 +11,8 @@ Creamos la clase de prueba AirportTest.<br>
   pruebaEliminarPasajeroDelVueloNegocios<br>
   pruebaAgregarPasajeroAlVueloEconomico<br>
   pruebaEliminarPasajeroDelVueloEconomico<br>
-  
-  
+
+<br> Pero esta mal implementado el codigo en la parte de removedPassenger, addPassenger de la clase Fligth, por eso falla el test , solo pasa "pruebaAgregarPasajeroAlVueloDeNegocios()", por eso mi cobertura es del 100%.
+
 ¿Cuáles son los resultados de las pruebas con cobertura obtenidad?
 ¿Puedes indicar algunas conclusiones de lo anterior, necesitamos refactorizar?

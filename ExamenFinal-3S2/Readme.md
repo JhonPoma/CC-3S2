@@ -2,10 +2,11 @@
 
 FASE ANTES:<br>
   se creo las clases, airport, flight, passenger<br>
+<br>
 FASE 1:<br>
 Sigue la lógica comercial para un vuelo comercial y traduce eso escribiendo una prueba llamada 
 AirportTest.<br>
-Creamos la clase de prueba AirportTest.
+Creamos la clase de prueba AirportTest.<br>
   pruebaAgregarPasajeroAlVueloDeNegocios<br>
   pruebaEliminarPasajeroDelVueloNegocios<br>
   pruebaAgregarPasajeroAlVueloEconomico<br>

@@ -7,10 +7,7 @@ FASE 1:<br>
 Sigue la lógica comercial para un vuelo comercial y traduce eso escribiendo una prueba llamada 
 AirportTest.<br>
 Creamos la clase de prueba AirportTest.<br>
-  pruebaAgregarPasajeroAlVueloDeNegocios<br>
-  pruebaEliminarPasajeroDelVueloNegocios<br>
-  pruebaAgregarPasajeroAlVueloEconomico<br>
-  pruebaEliminarPasajeroDelVueloEconomico<br>
+
 
 <br> Pero esta mal implementado el codigo en la parte de removedPassenger, addPassenger de la clase Fligth, por eso falla el test , solo pasa "pruebaAgregarPasajeroAlVueloDeNegocios()", por eso mi cobertura no es del 100%.
 

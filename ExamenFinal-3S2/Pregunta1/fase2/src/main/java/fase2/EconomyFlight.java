@@ -7,7 +7,7 @@ public class EconomyFlight extends Flight {
 
     /**
      * Ya no necesito saber de que tipo es el pasajero.
-     * Porque estoy en la clase Economy
+     * Porque estoy en la clase Economy, asi que lo agrego.
      *
      * @param passenger pasajero
      * @return

@@ -6,8 +6,9 @@ import fase2.Passenger;
 public class Airport {
 
     public static void main(String[] args) {
-        Flight economyFlight = new Flight("1", "Economico");
-        Flight businessFlight = new Flight("2", "Negocios");
+        //Creo los dos 2 objetos, le paso el id y ya no el tipo porque ambas clases estan separadas.
+        Flight economyFlight = new EconomyFlight("1");
+        Flight businessFlight = new BussinesFlight("2");
 
         Passenger checha = new Passenger("Checha", true);
         Passenger lore = new Passenger("Lore", false);

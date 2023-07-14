@@ -29,7 +29,7 @@ public class Flight {
 
     public boolean addPassenger(Passenger passenger) {
         switch (flightType) {
-            case "Economica":
+            case "Economico":
                 return passengers.add(passenger);
             case "Negocios":
                 if (passenger.isVip()) {
@@ -39,12 +39,11 @@ public class Flight {
             default:
                 throw new RuntimeException("Tipo desconocido: " + flightType);
         }
-
     }
 
     public boolean removePassenger(Passenger passenger) {
         switch (flightType) {
-            case "Economica":
+            case "Economico":
                 if (!passenger.isVip()) {
                     return passengers.remove(passenger);
                 }

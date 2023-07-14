@@ -1,5 +1,5 @@
 //completa
-package fase1;
+import fase1.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -20,7 +20,8 @@ public class AirportTest {
 
         @BeforeEach
         void setUp() {
-            economyFlight = new EconomyFlight("1");
+            //economyFlight = new EconomyFlight("1"); //Aun no esta implementado
+            economyFlight = new Flight("1","Economico");
             checha = new Passenger("Checha", false);
             lore = new Passenger("Lore", true);
         }
@@ -71,7 +72,8 @@ public class AirportTest {
 
         @BeforeEach
         void setUp() {
-            businessFlight = new BusinessFlight("2");
+            //businessFlight = new BusinessFlight("2");//Aun no esta implementado
+            businessFlight = new Flight("2","Negocios");
             checha = new Passenger("Checha", false);
             lore = new Passenger("Lore", true);
         }

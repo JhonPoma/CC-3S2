@@ -11,9 +11,8 @@ public class Airport {
 
 
         businessFlight.addPassenger(checha);
-        //businessFlight.removePassenger(checha);
-        //businessFlight.addPassenger(lore);
-
+        businessFlight.removePassenger(checha);
+        businessFlight.addPassenger(lore);
         economyFlight.addPassenger(lore);
 
         System.out.println(" Lista de pasajeros de vuelos de negocios:");

@@ -108,4 +108,53 @@ public class AirportTest {
             }
         }
     }
+
+
+
+    @DisplayName("Vuelo Premium")
+    @Nested
+    class PremiumFlightTest {
+        private Flight premiumFlight;
+        private Passenger checha;
+        private Passenger lore;
+
+        @BeforeEach
+        void setUp() {
+            premiumFlight = new PremiumFlight("3");
+            checha = new Passenger("Checha", false);
+            lore = new Passenger("Lore", true);
+        }
+
+        @Nested
+        @DisplayName("Cuando tenemos un pasajero Regular")
+        class RegularPassenger {
+
+            @Test
+            @DisplayName("Entonces no puedo agregarlo o eliminarlo de un vuelo Premium")
+            public void testBusinessFlightRegularPassenger() {
+                assertAll("Verifica todas las condiciones para un pasajero regular y un vueloPremium",
+                        () -> assertEquals(false, premiumFlight.addPassenger(checha)),
+                        () -> assertEquals(0, premiumFlight.getPassengersList().size()),
+                        () -> assertEquals(false, premiumFlight.removePassenger(checha)),
+                        () -> assertEquals(0, premiumFlight.getPassengersList().size())
+                );
+            }
+        }
+
+        @Nested
+        @DisplayName("Cuando tenemos un pasajero VIP")
+        class VipPassenger {
+
+            @Test
+            @DisplayName("Luego puedes agregarlo pero no puede eliminarlo de un vuelo de negocios")
+            public void testBusinessFlightVipPassenger() {
+                assertAll("Verifica todas las condiciones para un pasajero VIP y un vuelo de negocios",
+                        () -> assertEquals(true, premiumFlight.addPassenger(lore)),
+                        () -> assertEquals(1, premiumFlight.getPassengersList().size()),
+                        () -> assertEquals(false, premiumFlight.removePassenger(lore)),
+                        () -> assertEquals(1, premiumFlight.getPassengersList().size())
+                );
+            }
+        }
+    }
 }

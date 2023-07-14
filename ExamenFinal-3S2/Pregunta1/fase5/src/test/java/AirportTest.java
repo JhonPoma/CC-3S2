@@ -126,7 +126,7 @@ public class AirportTest {
             }
 
             @RepeatedTest(2)
-            @DisplayName("No puedo agregarlo a un vuelo economico mas de una vez")
+            @DisplayName("No puedo agregarlo a un vuelo Negocios mas de una vez")
             public void testVueloNegocioPasajeroVipAgregarUnaSolaVez(RepetitionInfo repetitionInfo){
                 for(int i = 0; i<repetitionInfo.getCurrentRepetition(); i++){
                     businessFlight.addPassenger(lore);

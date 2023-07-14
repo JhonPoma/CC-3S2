@@ -36,7 +36,7 @@ public class Flight {
                     return passengers.add(passenger);
                 }
                 return false;
-            default:
+           default:
                 throw new RuntimeException("Tipo desconocido: " + flightType);
         }
     }

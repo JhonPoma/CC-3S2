@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AirportTest {
 
+    //=======================================================
     @DisplayName("Vuelo Economico")
     @Nested
     class EconomyFlightTest {
@@ -85,11 +86,7 @@ public class AirportTest {
     }
 
 
-
-
-
-
-
+    //=======================================================
     @DisplayName("Vuelo de Negocios")
     @Nested
     class BusinessFlightTest {
@@ -149,7 +146,7 @@ public class AirportTest {
     }
 
 
-
+    //=======================================================
     @DisplayName("Vuelo Premium")
     @Nested
     class PremiumFlightTest {

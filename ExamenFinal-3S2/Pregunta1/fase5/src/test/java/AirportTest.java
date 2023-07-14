@@ -22,8 +22,6 @@ public class AirportTest {
             lore = new Passenger("Lore", true);
         }
 
-
-
         @Nested
         @DisplayName("Cuando tenemos un pasajero REGULAR")
         class RegularPassenger {
@@ -39,13 +37,13 @@ public class AirportTest {
                         () -> assertEquals(0, economyFlight.getPassengersSet().size())
                 );
             }
-            @RepeatedTest(2)
+            @RepeatedTest(2)//Repito 2
             @DisplayName("No se puede registrar dos veces en un mismo vuelo")
             public void testVueloEconomicoPasajeroRegularAgregarUnaSolaVez(RepetitionInfo repetitionInfo){
                     for(int i = 0; i<repetitionInfo.getCurrentRepetition(); i++){
-                        economyFlight.addPassenger(checha);
+                        economyFlight.addPassenger(checha);// Agrego 2 veces al pasajero checha, pero solo se guardara 1 vez
                     }
-                    assertAll("Verifica que un pasajero VIP se pueda agregar a un vuelo económico solo una vez",
+                    assertAll("Verifica que un pasajero REGULAR se pueda agregar a un vuelo económico solo una vez",
                             () -> assertEquals(1, economyFlight.getPassengersSet().size()),
                             () -> assertTrue(economyFlight.getPassengersSet().contains(checha))
                     );
@@ -99,7 +97,7 @@ public class AirportTest {
         }
 
         @Nested
-        @DisplayName("Cuando tenemos un pasajero regular")
+        @DisplayName("Cuando tenemos un pasajero REGULAR")
         class RegularPassenger {
             @Test
             @DisplayName("Entonces no puedes agregarlo o eliminarlo de un vuelo de negocios")
@@ -128,15 +126,14 @@ public class AirportTest {
             }
 
             @RepeatedTest(2)
-            @DisplayName("No puedo agregarlo a un vueloNegocios mas de una vez")
-            public void test1vezVip(RepetitionInfo repetitionInfo){
-                for(int i=0; i<repetitionInfo.getCurrentRepetition(); i++){
+            @DisplayName("No puedo agregarlo a un vuelo economico mas de una vez")
+            public void testVueloNegocioPasajeroVipAgregarUnaSolaVez(RepetitionInfo repetitionInfo){
+                for(int i = 0; i<repetitionInfo.getCurrentRepetition(); i++){
                     businessFlight.addPassenger(lore);
                 }
-                assertAll("Verificamos que un pasajero VIP se pueda agregar a un vuelo de negocios solo una vez",
+                assertAll("Verificamos que un pasajero VIP se agrego a un vuelo Negocio solo una vez",
                         () -> assertEquals(1, businessFlight.getPassengersSet().size()),
-                        () -> assertTrue(businessFlight.getPassengersSet().contains(lore)),
-                        () -> assertTrue(new ArrayList<>(businessFlight.getPassengersSet()).get(0).getName().equals("Lore"))
+                        () -> assertTrue(businessFlight.getPassengersSet().contains(lore))
                 );
             }
         }
@@ -159,7 +156,7 @@ public class AirportTest {
         }
 
         @Nested
-        @DisplayName("Cuando tenemos un pasajero Regular")
+        @DisplayName("Cuando tenemos un pasajero REGULAR")
         class RegularPassenger {
 
             @Test
@@ -186,6 +183,17 @@ public class AirportTest {
                         () -> assertEquals(1, premiumFlight.getPassengersSet().size()),
                         () -> assertEquals(true, premiumFlight.removePassenger(lore)),
                         () -> assertEquals(0, premiumFlight.getPassengersSet().size())
+                );
+            }
+            @RepeatedTest(2)//Repito 2
+            @DisplayName("No se puede registrar dos veces en un mismo vuelo")
+            public void testVueloPremiumPasajeroRegularAgregarUnaSolaVez(RepetitionInfo repetitionInfo){
+                for(int i = 0; i<repetitionInfo.getCurrentRepetition(); i++){
+                    premiumFlight.addPassenger(lore);// Agrego 2 veces al pasajero lore, pero solo se guardara 1 vez
+                }
+                assertAll("Verifica que un pasajero VIP se pueda agregar a un vuelo Premium solo una vez",
+                        () -> assertEquals(1, premiumFlight.getPassengersSet().size()),
+                        () -> assertTrue(premiumFlight.getPassengersSet().contains(lore))
                 );
             }
         }

@@ -1,7 +1,7 @@
 package fase2;
 
-public class BussinesFlight extends Flight{
-    public BussinesFlight(String id){
+public class BussinessFlight extends Flight{
+    public BussinessFlight(String id){
         super(id);
     }
 

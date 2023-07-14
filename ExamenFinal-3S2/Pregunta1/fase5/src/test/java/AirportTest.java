@@ -47,8 +47,7 @@ public class AirportTest {
                     }
                     assertAll("Verifica que un pasajero VIP se pueda agregar a un vuelo económico solo una vez",
                             () -> assertEquals(1, economyFlight.getPassengersSet().size()),
-                            () -> assertTrue(economyFlight.getPassengersSet().contains(checha)),
-                            () -> assertTrue(new ArrayList<>(economyFlight.getPassengersSet()).get(0).getName().equals("Checha"))
+                            () -> assertTrue(economyFlight.getPassengersSet().contains(checha))
                     );
                 }
             }
@@ -69,17 +68,15 @@ public class AirportTest {
                         () -> assertEquals(1, economyFlight.getPassengersSet().size())
                 );
             }
-
             @RepeatedTest(2)
             @DisplayName("No puedo agregarlo a un vuelo economico mas de una vez")
             public void testVueloEconomicoPasajeroVipAgregarUnaSolaVez(RepetitionInfo repetitionInfo){
                 for(int i = 0; i<repetitionInfo.getCurrentRepetition(); i++){
                     economyFlight.addPassenger(lore);
                 }
-                assertAll("Verifica que un pasajero VIP se pueda agregar a un vuelo económico solo una vez",
+                assertAll("Verificamos que un pasajero VIP se agrego a un vuelo económico solo una vez",
                         () -> assertEquals(1, economyFlight.getPassengersSet().size()),
-                        () -> assertTrue(economyFlight.getPassengersSet().contains(lore)),
-                        () -> assertTrue(new ArrayList<>(economyFlight.getPassengersSet()).get(0).getName().equals("Lore"))
+                        () -> assertTrue(economyFlight.getPassengersSet().contains(lore))
                 );
             }
         }

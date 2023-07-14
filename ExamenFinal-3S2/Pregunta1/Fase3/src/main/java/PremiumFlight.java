@@ -1,6 +1,16 @@
-public class PremiumFlight extends Flight {
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class PremiumFlight{
+    private String id;
+    private List<Passenger> passengers = new ArrayList<Passenger>();
+
     public PremiumFlight(String id){
-        super(id);
+        this.id = id;
+    }
+    public List<Passenger> getPassengersList() {
+        return Collections.unmodifiableList(passengers);
     }
 
     /**
@@ -9,7 +19,6 @@ public class PremiumFlight extends Flight {
      * @param passenger pasajero
      * @return true si es vip, false si es regular.
      */
-    @Override
     public boolean addPassenger(Passenger passenger) {
         if(passenger.isVip()){
             return passengers.add(passenger);
@@ -18,11 +27,10 @@ public class PremiumFlight extends Flight {
     }
 
     /**
-     *  Si se requiere, un pasajero puede ser eliminado de un vuelo
+     * Si se requiere, un pasajero puede ser eliminado de un vuelo
      * @param passenger pasajero
      * @return true
      */
-    @Override
     public boolean removePassenger(Passenger passenger){
         return passengers.remove(passenger);
     }

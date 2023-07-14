@@ -114,7 +114,7 @@ public class AirportTest {
     @DisplayName("Vuelo Premium")
     @Nested
     class PremiumFlightTest {
-        private Flight premiumFlight;
+        private PremiumFlight premiumFlight;
         private Passenger checha;
         private Passenger lore;
 
@@ -157,4 +157,5 @@ public class AirportTest {
             }
         }
     }
+
 }

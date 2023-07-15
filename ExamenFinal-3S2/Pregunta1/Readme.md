@@ -11,7 +11,7 @@ src  :=>Aqui esta mi avance del dia Miercoles 12/07<br>
 Readme.md<br>
 pom.xml<br>
 
-💡ContinuacionExamenFinal:<br>
+💡ContinuacionExamenFinal:(separado por carpetas)<br>
 Antes<br>
 fase1<br>
 fase2<br>

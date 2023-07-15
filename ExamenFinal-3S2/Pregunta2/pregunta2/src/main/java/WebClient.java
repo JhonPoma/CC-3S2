@@ -15,7 +15,7 @@ public class WebClient {
             //HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection = (HttpURLConnection) url.openConnection();
             connection.setDoInput(true);
-            connection.connect();//ASI PODEMOS LLAMAR AL METODO CONNECT DEL STUB
+            connection.connect();
             InputStream is = connection.getInputStream();
             byte[] buffer = new byte[2048];
             int count;
@@ -25,6 +25,7 @@ public class WebClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
         return content.toString();
     }
 }

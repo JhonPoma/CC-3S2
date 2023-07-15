@@ -1,8 +1,5 @@
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
+import java.net.*;
+
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,8 +28,34 @@ public class TestWebClientInicial{
     public void testGetContentOk() throws MalformedURLException {
         WebClient client = new WebClient();
         String workingContent = client.getContent(new URL("http://localhost:8081/testGetContentOk"));
-
         assertEquals("Esto funciona", workingContent);
     }
 
+    @Test
+    public void testStubGetContentOk() throws Exception {
+        String expectedContent = "Esto funciona";
+        stubConnection.getInputStream();
+        String actualContent = webClient.getContent(new URL("http://localhost:8081/testGetContentOk"));
+        assertEquals(expectedContent, actualContent);
+    }
+
+
+    private static class StubURLStreamHandlerFactory implements URLStreamHandlerFactory {
+        @Override
+        public URLStreamHandler createURLStreamHandler(String protocol) {
+            if ("http".equals(protocol)) {
+                return new StubHttpURLStreamHandler();
+            }
+            return null;
+        }
+
+        private static class StubHttpURLStreamHandler extends URLStreamHandler {
+            @Override
+            protected URLConnection openConnection(URL url) {
+                return new StubHttpURLConnection(url);
+            }
+        }
+    }
 }
+
+

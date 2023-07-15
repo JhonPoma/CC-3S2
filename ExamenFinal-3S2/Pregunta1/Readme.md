@@ -2,7 +2,7 @@
 
 Mi avance del dia miercoles fue hasta la fase 2, pero cometi un error y es que lo estaba creando todo dentro de 
 
-un archivo, <span style="color: red;">src/main/java/.</span> , luego decidi hacerlo por separado, pero como evidencia lo deje esas carpetas.
+un archivo, **src/main/java/.** , luego decidi hacerlo por separado, pero como evidencia lo deje esas carpetas.
 
 💡Creacion del Miercoles 12/07:<br>
 .idea<br>

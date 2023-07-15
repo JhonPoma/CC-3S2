@@ -8,10 +8,20 @@ public class TestWebClientInicial{
     private WebClient webClient;
     private StubHttpURLConnection stubConnection;
 
+    /**
+     * Nos perrmitira utilizar un controlador de flujo de URL personalizado
+     * en lugar del controlador predeterminado al abrir una conexión HTTP.
+     */
     @BeforeAll
     public static void setUpClass() {
         URL.setURLStreamHandlerFactory(new StubURLStreamHandlerFactory());
     }
+
+    /**
+     * Utilizaremos el stub StubHttpURLConnection en lugar de una conexión real.
+     * La instancia de WebClient se debe conectar con el stub.
+     * @throws Exception
+     */
     @BeforeEach
     public void setUp() throws Exception {
         webClient = new WebClient();
@@ -31,31 +41,22 @@ public class TestWebClientInicial{
         assertEquals("Esto funciona", workingContent);
     }
 
+    /**
+     * En esta prueba corroboramos que WebClient esté funcionando
+     * correctamente con el stub y pueda obtener el resultado esperado.
+     * @throws Exception
+     */
     @Test
     public void testStubGetContentOk() throws Exception {
         String expectedContent = "Esto funciona";
         stubConnection.getInputStream();
         String actualContent = webClient.getContent(new URL("http://localhost:8081/testGetContentOk"));
+        System.out.println(actualContent);
         assertEquals(expectedContent, actualContent);
     }
 
 
-    private static class StubURLStreamHandlerFactory implements URLStreamHandlerFactory {
-        @Override
-        public URLStreamHandler createURLStreamHandler(String protocol) {
-            if ("http".equals(protocol)) {
-                return new StubHttpURLStreamHandler();
-            }
-            return null;
-        }
 
-        private static class StubHttpURLStreamHandler extends URLStreamHandler {
-            @Override
-            protected URLConnection openConnection(URL url) {
-                return new StubHttpURLConnection(url);
-            }
-        }
-    }
 }
 
 

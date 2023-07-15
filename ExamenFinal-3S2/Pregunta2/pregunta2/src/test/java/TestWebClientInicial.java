@@ -11,7 +11,6 @@ public class TestWebClientInicial{
     public static void setUp() {
 
     }
-
     @AfterAll
     public static void tearDown() {
         // Se detiene Jetty.
@@ -23,6 +22,7 @@ public class TestWebClientInicial{
         WebClient client = new WebClient();
         String workingContent = client.getContent(new URL("http://localhost:8081/testGetContentOk"));
 
-        assertEquals("Esto trabaja", workingContent);
+        assertEquals("Esto funciona", workingContent);
     }
+
 }

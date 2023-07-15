@@ -15,8 +15,9 @@ public class Jetty {
         Server server = new Server(8081);
 
         Context root = new Context(server, "/");
-        root.setResourceBase("./pom.xml");
-        root.setHandler(new ResourceHandler());
+        //root.setResourceBase("./pom.xml");
+        //root.setHandler(new ResourceHandler());
+        root.setHandler(new TestGetContentOkHandler());
 
         server.setStopAtShutdown(true);
         server.start();

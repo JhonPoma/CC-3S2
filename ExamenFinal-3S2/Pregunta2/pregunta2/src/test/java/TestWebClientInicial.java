@@ -1,15 +1,25 @@
 import java.net.MalformedURLException;
 import java.net.URL;
-
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestWebClientInicial{
+    private WebClient webClient;
+    private StubHttpURLConnection stubConnection;
 
     @BeforeAll
-    public static void setUp() {
-
+    public static void setUpClass() {
+        URL.setURLStreamHandlerFactory(new StubURLStreamHandlerFactory());
+    }
+    @BeforeEach
+    public void setUp() throws Exception {
+        webClient = new WebClient();
+        stubConnection = new StubHttpURLConnection(new URL("http://localhost:8081"));
+        webClient.setConnection(stubConnection); //STUB
     }
     @AfterAll
     public static void tearDown() {

@@ -41,8 +41,8 @@ public class TestWebClient {
     }
 
     private static class TestGetContentOkHandler extends AbstractHandler {
+        @Override
         public void handle(String target, HttpServletRequest request, HttpServletResponse response, int dispatch) throws IOException {
-            //response.setContentType("text/html;charset=utf-8");
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStream out = response.getOutputStream();
             out.write("Esto funciona".getBytes());
